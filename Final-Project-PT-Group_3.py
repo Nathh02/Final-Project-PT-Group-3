@@ -143,7 +143,6 @@ class DiskSchedulingApp:
         self._build_about_page()
 
     def _build_home_page(self) -> None:
-        # Upper Split: Left Input Card + Right Results Card
         upper_row = tk.Frame(self.home_page, bg="#e9edf2")
         upper_row.pack(fill=tk.BOTH, expand=True)
 
@@ -319,7 +318,7 @@ class DiskSchedulingApp:
         )
         self.active_algo_banner.pack(side=tk.RIGHT)
 
-        # Info Strip (Initial Head, Queue, Service Sequence)
+        # Info Strip
         info_strip = tk.Frame(results_card, bg="#f8fafc", bd=1, relief=tk.SOLID, padx=10, pady=6)
         info_strip.pack(fill=tk.X, pady=(0, 10))
 
@@ -345,7 +344,7 @@ class DiskSchedulingApp:
         )
         self.lbl_sequence.pack(fill=tk.X, pady=(2, 0))
 
-        # Step-by-step Table
+        # Step by step Table
         table_frame = tk.Frame(results_card, bg="#ffffff")
         table_frame.pack(fill=tk.BOTH, expand=True)
 
@@ -374,7 +373,7 @@ class DiskSchedulingApp:
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
-        # Summary Metric Cards (2x2 grid)
+        # Summary Metric Cards
         stats_grid = tk.Frame(results_card, bg="#ffffff")
         stats_grid.pack(fill=tk.X, pady=(10, 0))
         stats_grid.columnconfigure(0, weight=1)
